@@ -13,15 +13,41 @@
     <h1 class="layout_header"> <span>Foody</span>Seeker</h1>
     </header>
 
-    <div> 
+    <div class="layout">
+        <aside>
+            <div id="searchBox" >
+                <form method="get" action="">
+                    <section>
+                        <select>
+                            <option value="0">Select City</option>
+                            <option value="1">Palisades Park</option>
+                            <option value="2">Paramus</option>
+                            <option value="3">Fort Lee</option>
+                        </select>
+                        
+                        <input type="submit" value = "Search Area"/>
 
-    </div>
+                    </section>
+                </form>
+            </div>
+            <div id="listTable">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr><th>Restaurants</th><th>Rating</th></tr>
+                    </thead>
+                    <tbody id="Table">
 
-
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    </div> 
+        
     <div id="map">
 
     </div>
-
+  
+    
 </body>
 <script src="index.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVH59dXmPQDS50KAdfJ7VWiz9uwTGxjiI&callback=initMap&libraries=places&v=weekly" async></script>
