@@ -2,7 +2,7 @@ html, body{
     height:100%;
     margin:0;
     padding:0px;
-    background-color: #f7dc6e;
+    background-color: #f7dc6e !important;
     font-family: tahoma;
 }
 .layout_header
@@ -15,7 +15,7 @@ html, body{
     float:right;
     border: 2px solid white;
     height:75%;
-    width:50%;
+    width:65%;
     display: block;
     margin-left: auto;
     margin-right: 1em;
@@ -37,8 +37,33 @@ div#searchBox, div#listTable {
 
  .layout aside{
      float: left;
-     width: 320px;
+     width: 30%;
+     margin-left: 1px;
      background-color: white;
  }
 
+ footer {
+    padding-top: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #c4ae57;
+    color: white;
+    text-align: center;
+  }
+.facebook{
+    width:2vw;
+    height:auto;
+ }
+
+ .instagram{
+    width:2vw;
+    height:auto;
+ }
  
+ .twitter{
+    width:2vw;
+    height:auto;
+ }
