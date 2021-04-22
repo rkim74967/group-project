@@ -15,5 +15,30 @@ if($result = mysqli_query($conn, $sql)){
     //added drink otherwise error
 }
 
+This will get the latitude and longitude from the database but needs work
+
+if( $_SERVER["REQUEST_METHOD"] == "GET"){
+
+$lat = $_GET["latitude"];
+$lng = $_GET["longitude"];
+
+
+include 'dbo.php';
+$conn = OpenCon();
+
+
+$sql = "SELECT latitude, longitude FROM our_table;
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  
+    send to JS file Lat and Lng to appear on map
+  }
+} else {
+
+  echo "0 results";
+}
+
 }
 ?> -->
