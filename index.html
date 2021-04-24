@@ -4,12 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foody Seeker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
-    Hello World
-    AHmad Made change?
-	Murad made change?
-	Nicol Made Change?
+    </body>
+    <header>
+    <h1 class="layout_header"> <span>Foody</span>Seeker</h1>
+    </header>
+
+    <div class="layout">
+        <aside>
+            <div id="searchBox" >
+                <form method="get" action="">
+                    <section>
+                        <select>
+                            <option value="0">Select City</option>
+                            <option value="1">Palisades Park</option>
+                            <option value="2">Paramus</option>
+                            <option value="3">Fort Lee</option>
+                        </select>
+                        
+                        <input type="submit" value = "Search Area"/>
+
+                    </section>
+                </form>
+            </div>
+            <div id="listTable">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr><th>Restaurants</th><th>Rating</th></tr>
+                    </thead>
+                    <tbody id="Table">
+
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    </div> 
+        
+    <div id="map">
+
+    </div>
+
+    
+    <footer>
+
+        <a href= "facebook.com"><img class = "facebook" src="icons/facebook-icon.png"></a>   
+        <a href= "instagram.com"><img class = "instagram" src="icons/instagram.png"></a>   
+        <a href= "twitter.com"><img class = "twitter" src="icons/twitter.png"></a>
+
+        <br>
+    
+        <h6>Info.Support.Marketing Terms of Use . Privacy Policy</h6>
+        
+
+
+        <h6>&copy; 2021 Foody Seeker</h6>
+        
+    </footer>
+  
+    
 </body>
+
+<script src="index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVH59dXmPQDS50KAdfJ7VWiz9uwTGxjiI&callback=initMap&libraries=places&v=weekly" async></script>
 </html>
