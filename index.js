@@ -1,7 +1,13 @@
 let map;
 let service;
 let infowindow;
-
+/* this will allow php variable in the JS code I think, needs work
+<script type='text/javascript'>
+    document.body.onclick(function(){
+        var myVariable = <?php echo(json_encode($myVariable)); ?>;
+    };
+</script>
+*/
 function initMap() {
 
   let location = new google.maps.LatLng(40.8462989,-74.0043587)
