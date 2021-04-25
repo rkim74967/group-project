@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-
 <body>
-    </body>
+    <?php
+        include('data.php');
+     ?>
     <header>
     <h1 class="layout_header"> <span>Foody</span>Seeker</h1>
     </header>
@@ -20,14 +21,15 @@
             <div id="searchBox" >
                 <form method="get" action="">
                     <section>
-                        <select>
-                            <option value="0">Select City</option>
-                            <option value="1">Palisades Park</option>
-                            <option value="2">Paramus</option>
-                            <option value="3">Fort Lee</option>
+                        <select id="getSelect">
+                            <?php 
+                                while($row = mysqli_fetch_array($getTable)){
+                                    echo "<option id=".$row['id']." value=".$row['latitude'].'&'.$row['longitude'].">".$row['name']."</option>";
+                                }    
+                            ?>     
                         </select>
                         
-                        <input type="submit" value = "Search Area"/>
+                        <input type="button" value = "Search Area"/ onclick="changeCity('getSelect')">
 
                     </section>
                 </form>
@@ -35,7 +37,10 @@
             <div id="listTable">
                 <table class="table table-bordered">
                     <thead>
-                        <tr><th>Restaurants</th><th>Rating</th></tr>
+                        <tr>
+                            <th>Restaurants</th>
+                            <th>Rating</th>
+                        </tr>
                     </thead>
                     <tbody id="Table">
 
@@ -68,7 +73,7 @@
   
     
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVH59dXmPQDS50KAdfJ7VWiz9uwTGxjiI&callback=initMap&libraries=places&v=weekly" async></script>
 </html>

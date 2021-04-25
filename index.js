@@ -9,8 +9,21 @@ let infowindow;
 </script>
 */
 function initMap() {
-
   let location = new google.maps.LatLng(40.8462989,-74.0043587)
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: location,
+    zoom: 15,
+  });
+}
+
+function changeCity(e){
+  let getSelect = document.getElementById(e);
+  let getLatLong = getSelect.options[getSelect.selectedIndex].value;
+  getLanLong = getLatLong.split("&");
+  let getLatitude = getLanLong[0];
+  let getLongitude = getLanLong[1];
+
+  let location = new google.maps.LatLng(getLatitude,getLongitude)
   infowindow = new google.maps.InfoWindow();
 
   map = new google.maps.Map(document.getElementById("map"), {
@@ -30,10 +43,16 @@ function initMap() {
 }
 
 function callback(results, status) {
+  $("#Table").empty();
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      if(results[i].rating >= 4.5){
+      if(results[i].rating >= 4.4){
         createMarker(results[i]);
+        $("#Table").append(
+          "<tr><td>"+results[i].name+"</td><td>"+results[i].rating+"</td></tr>"
+          );
+        
+
       }
     }
   }
@@ -59,4 +78,5 @@ function createMarker(place) {
     infowindow.open(map,this);
   })
 
+  
 }
