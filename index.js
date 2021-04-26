@@ -33,7 +33,7 @@ function changeCity(e){
 
   var request = {
     location: location,
-    radius: 1500,
+    radius: 3000,
     type: ['restaurant'],
     fields: ['name'],
   };
@@ -46,7 +46,7 @@ function callback(results, status) {
   $("#Table").empty();
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      if(results[i].rating >= 4.4){
+      if(results[i].rating >= 4.3){
         createMarker(results[i]);
         $("#Table").append(
           "<tr><td>"+results[i].name+"</td><td>"+results[i].rating+"</td></tr>"
@@ -80,3 +80,11 @@ function createMarker(place) {
 
   
 }
+
+window.onclick = function(e)
+    {   var id =  e.target.id;   
+     if (id === 'sent')  
+     { var txt = document.getElementById('example').value    
+       $( "#para" ).empty().append( txt );
+     }
+    }

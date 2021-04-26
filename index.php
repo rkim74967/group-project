@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foody Seeker</title>
+    <title>FoodySeeker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 </head>
 <body>
     <?php
         include('data.php');
      ?>
     <header>
-    <h1 class="layout_header"> <span>Foody</span>Seeker</h1>
+    <h1> <span>Foody</span>Seeker</h1>
     </header>
 
     <div class="layout">
@@ -47,7 +49,33 @@
                     </tbody>
                 </table>
             </div>
-        </aside>
+            <!-- <div class="col-md-6">
+
+                    <h3>Comments</h3>
+                    <form action="" method="post" >
+                        <input type="hidden" name="comment" value="" />
+                        <textarea name="comment"></textarea>
+                        <br/>
+                        <input type="submit" name="submit" value="Add Comment" />
+
+                    </form>
+
+                    <div class="comments">
+
+                    <?php 
+
+                    #$conn = OpenCon();
+
+                    #$sql = "INSERT INTO nj_cities.comments (comment)";
+
+
+                   # CloseCon($conn);
+
+                    ?>
+
+                    </div>
+                    </div> -->
+        </aside>       
     </div> 
         
     <div id="map">
@@ -55,21 +83,53 @@
     </div>
 
     
-    <footer>
+    <footer class="footer-distributed">
 
-        <a href= "https://www.facebook.com/"><img class = "facebook" src="icons/facebook-icon.png"></a>   
-        <a href= "https://www.instagram.com"><img class = "instagram" src="icons/instagram.png"></a>   
-        <a href= "https://www.twitter.com"><img class = "twitter" src="icons/twitter.png"></a>
+			<div class="footer-left">
+				<h3>About<span>FoodySeeker</span></h3>
 
-        <br>
-    
-        <h6>Info.Support.Marketing Terms of Use . Privacy Policy</h6>
-        
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
 
+				<p class="footer-company-name">© 2021 FoodySeeker</p>
+			</div>
 
-        <h6>&copy; 2021 Foody Seeker</h6>
-        
-    </footer>
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>300 Pompton Rd, Wayne, NJ 07470</span>
+						United States</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p><a href="tel:973-456-7890">(973)968-8121</a> </p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@foodyseeker.com">support@foodyseeker.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We make finding your next meal easy. Just click the city you want to dine in and leave the rest to us. </p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
   
     
 </body>
