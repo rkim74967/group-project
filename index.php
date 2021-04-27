@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodySeeker</title>
+    <title>FoodySeeker - Restaurant Search Engine</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
@@ -15,10 +15,10 @@
         include('data.php');
      ?>
     <header>
-    <h1> <span>Foody</span>Seeker</h1>
+    <img src="icons/WEB-logo.png" alt="FoodySeekerLogo">
     </header>
 
-    <div class="layout">
+    <div class="container-fluid">
         <aside>
             <div id="searchBox" >
                 <form method="get" action="">
@@ -76,14 +76,14 @@
                     </div>
                     </div> -->
         </aside>       
-    </div> 
-        
-    <div id="map">
-
-    </div>
-
     
-    <footer class="footer-distributed">
+
+        <div id="map">
+        </div>
+    </div> 
+    
+    <div id="footerdiv">
+        <footer class="footer-distributed">
 
 			<div class="footer-left">
 				<h3>About<span>FoodySeeker</span></h3>
@@ -130,6 +130,7 @@
 				</div>
 			</div>
 		</footer>
+    </div>
   
     
 </body>
