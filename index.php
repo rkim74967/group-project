@@ -114,7 +114,7 @@
 				</div>
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@foodyseeker.com">support@foodyseeker.com</a></p>
+					<p><a href="mailto:support@foodyseeker.com">eat@foodyseeker.com</a></p>
 				</div>
 			</div>
 			<div class="footer-right">
