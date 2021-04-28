@@ -1,4 +1,4 @@
-/*@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 html, body{
     height:100%;
@@ -61,20 +61,21 @@ tr:nth-of-type(odd) {
   }
   td, th { 
     padding: 6px; 
-    border: 1px solid #f7dc6e;  
+    border: 2px solid #f7dc6e;  
   }
 
  aside{
      width: 30%;
      margin-left: auto;
-     background-color: #f0d56b ;
-     border: 1px dashed #333;
+     background-color: #ddbc60e8 ;
+     border: 2px solid white;
  }
 
 
  footer
  {
 	bottom: 0;
+    border-top: 2px solid white;
 }
 
 
@@ -273,7 +274,7 @@ tr:nth-of-type(odd) {
     color: white;  
   }   */
   .fa:hover {  
-      opacity: 0.8;  
+      opacity: 0.6;  
   }  
   a:link {
     text-decoration: none;
