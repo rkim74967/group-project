@@ -1,7 +1,7 @@
 <?php
 $servername = "Localhost";
 $username = "root";
-$password = "";
+$password = "rlafbd12";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,'nj_cities');

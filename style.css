@@ -15,6 +15,8 @@ header{
     border: 2px solid white;
     height:100%;
     width:65%;
+    max-height:488.75px;
+    max-width:853.34px;
     margin-left: auto;
 	margin-right: auto;
 }
@@ -38,7 +40,7 @@ div#searchBox, div#listTable {
     padding: 1em 2em 1em 1em;
  }
  div#listTable
-{
+{   
     width: 100%;
     border-collapse: collapse;
 }
@@ -65,10 +67,12 @@ tr:nth-of-type(odd) {
   }
 
  aside{
+     max-height:488.75px;
      width: 30%;
      margin-left: auto;
      background-color: #ddbc60e8 ;
      border: 2px solid white;
+     overflow: visible;
  }
 
 
@@ -294,5 +298,10 @@ tr:nth-of-type(odd) {
   a:active {
     text-decoration: underline;
     color: thistle;
+  }
+  .table-custom{
+      display:block;
+      max-height: 390px !important;
+      overflow-y: scroll;
   }
   

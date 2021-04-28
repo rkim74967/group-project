@@ -12,7 +12,7 @@ function initMap() {
   let location = new google.maps.LatLng(40.8462989,-74.0043587)
   map = new google.maps.Map(document.getElementById("map"), {
     center: location,
-    zoom: 15,
+    zoom: 13,
   });
 }
 
@@ -22,15 +22,22 @@ function changeCity(e){
   getLanLong = getLatLong.split("&");
   let getLatitude = getLanLong[0];
   let getLongitude = getLanLong[1];
+  let getTable = $(".table");
+  console.log(getTable.hasClass("table-custom"));
+  if(!getTable.hasClass("table-custom")){
+    getTable.addClass('table-custom');
+  }
+  
 
   let location = new google.maps.LatLng(getLatitude,getLongitude)
   infowindow = new google.maps.InfoWindow();
 
   map = new google.maps.Map(document.getElementById("map"), {
     center: location,
-    zoom: 15,
+    zoom: 13,
   });
 
+  
   var request = {
     location: location,
     radius: 3000,
@@ -48,8 +55,11 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       if(results[i].rating >= 4.3){
         createMarker(results[i]);
+        if(results[i].name.length >= 6){
+          results[i].name = results[i].name+"\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0";
+        }
         $("#Table").append(
-          "<tr><td>"+results[i].name+"</td><td>"+results[i].rating+"</td></tr>"
+          "<tr onclick=\'showRestaurant(this)\'><td>"+results[i].name+"</td><td>"+results[i].rating+"</td></tr>"
           );
         
 
@@ -73,7 +83,6 @@ function createMarker(place) {
       "<br>"+
       "⭐"+place.rating +
       "</div>"
-       
     );
     infowindow.open(map,this);
   })
@@ -88,3 +97,8 @@ window.onclick = function(e)
        $( "#para" ).empty().append( txt );
      }
     }
+
+function showRestaurant(e){
+  let a = $(".gm-style-iw-d");
+  console.log(a);
+}
