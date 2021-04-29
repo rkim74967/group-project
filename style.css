@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&display=swap');
 
 html, body{
     height:100%;
@@ -15,18 +15,15 @@ header{
     border: 2px solid white;
     height:100%;
     width:65%;
-    max-height:488.75px;
-    max-width:853.34px;
     margin-left: auto;
-	margin-right: auto;
+    margin-right: auto;
 }
 .container-fluid{
 	display: inline-flex;
 	justify-content: flex-start;
-	flex-wrap: wrap;
 	margin-top: 2em;
-	margin-bottom: 0em;
-	height: 75%;
+	margin-bottom: auto;
+	height: 100%;
 }
 h1
 {
@@ -44,6 +41,7 @@ div#searchBox, div#listTable {
     width: 100%;
     border-collapse: collapse;
 }
+
 div#commentBox
 {
     margin: 0.25em auto;
@@ -65,20 +63,29 @@ tr:nth-of-type(odd) {
     padding: 6px; 
     border: 2px solid #f7dc6e;  
   }
-
+  /* .table-custom{
+    display:block;
+    max-height: 390px !important;
+    overflow-y: scroll;
+} */
  aside{
-     max-height:488.75px;
      width: 30%;
      margin-left: auto;
      background-color: #ddbc60e8 ;
      border: 2px solid white;
      overflow: visible;
  }
-
+ aside #listTable
+ {
+     overflow-y: scroll;
+     max-height: 85%;
+ }
 
  footer
  {
 	bottom: 0;
+    position:static;
+
     border-top: 2px solid white;
 }
 
@@ -94,7 +101,7 @@ tr:nth-of-type(odd) {
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
-    padding: 50px 50px 60px 50px;
+    padding: 50px 50px 10px 50px;
     margin-top: 80px;
 }
 
@@ -113,12 +120,12 @@ tr:nth-of-type(odd) {
 
 .footer-distributed h3{
     color:  #ffffff;
-    font: normal 36px 'Cookie', cursive;
+    font: normal 36px 'Dosis', cursive;
     margin: 0;
 }
 
 .footer-distributed h3 span{
-    color:  #e0ac1c;
+    color:  #f7dc6e;
 }
 
 /* Footer links */
@@ -183,7 +190,7 @@ tr:nth-of-type(odd) {
 }
 
 .footer-distributed .footer-center p a{
-    color:  #e0ac1c;
+    color:  #f7dc6e;
     text-decoration: none;;
 }
 
@@ -231,9 +238,8 @@ tr:nth-of-type(odd) {
 }
 
 /* Here is the code for Responsive Footer */
-/* You can remove below code if you don't want Footer to be responsive */
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 
     .footer-distributed .footer-left,
     .footer-distributed .footer-center,
@@ -277,31 +283,33 @@ tr:nth-of-type(odd) {
     background: #bb0000;  
     color: white;  
   }   */
-  .fa:hover {  
-      opacity: 0.6;  
-  }  
-  a:link {
-    text-decoration: none;
-    color: white;
+
+/*SCROLL BAR DESIGN/*/
+
+body::-webkit-scrollbar {
+    width: 12px;               / width of the entire scrollbar /
   }
-  
-  a:visited {
-    text-decoration: none;
-    color: teal;
+
+body::-webkit-scrollbar-track {
+    background: #f7dc6e;        / color of the tracking area /
   }
-  
-  a:hover {
-    text-decoration: underline;
-    color: #e0ac1c;
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2c292f;    / color of the scroll thumb /
+    border-radius: 20px;       / roundness of the scroll thumb /
+    border: 1px solid white;  / creates padding around scroll thumb /
   }
-  
-  a:active {
-    text-decoration: underline;
-    color: thistle;
+
+aside #listTable::-webkit-scrollbar {
+    width: 12px;               / width of the entire scrollbar /
   }
-  .table-custom{
-      display:block;
-      max-height: 390px !important;
-      overflow-y: scroll;
+
+aside #listTable::-webkit-scrollbar-track {
+    background: #ddbc60e8;        / color of the tracking area /
   }
-  
+
+aside #listTable::-webkit-scrollbar-thumb {
+    background-color: #2c292f;    / color of the scroll thumb /
+    border-radius: 20px;       / roundness of the scroll thumb /
+    border: 1px solid white;  / creates padding around scroll thumb */
+}

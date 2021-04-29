@@ -7,7 +7,8 @@
     <title>FoodySeeker - Restaurant Search Engine</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 </head>
 <body>
@@ -86,7 +87,7 @@
         <footer class="footer-distributed">
 
 			<div class="footer-left">
-				<h3>About<span>FoodySeeker</span></h3>
+				<h3>ABOUT<span>FOODYSEEKER</span></h3>
 
 				<p class="footer-links">
 					<a href="#">Home</a>
@@ -120,7 +121,7 @@
 			<div class="footer-right">
 				<p class="footer-company-about">
 					<span>About the company</span>
-					We make finding your next meal easy. Just click the city you want to dine in and leave the rest to us. </p>
+					We make finding your next meal easy. Just click the <br>city you want to dine in and leave the rest to us. </p>
 				<div class="footer-icons">
 					<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
 					<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
