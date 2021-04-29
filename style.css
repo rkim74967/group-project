@@ -8,11 +8,12 @@ html, body{
     font-family: tahoma;
 }
 header{
-	padding-top: 1em;
+	padding-top: 1.5em;
 }
 
 #map{
     border: 2px solid white;
+    border-radius: 30px 30px 30px 30px;
     height:100%;
     width:65%;
     margin-left: auto;
@@ -37,7 +38,8 @@ div#searchBox, div#listTable {
     padding: 1em 2em 1em 1em;
  }
  div#listTable
-{   
+{       
+    
     width: 100%;
     border-collapse: collapse;
 }
@@ -70,9 +72,12 @@ tr:nth-of-type(odd) {
 } */
  aside{
      width: 30%;
-     margin-left: auto;
+     padding-top: 1em;
+     padding-left: 1em;
+     margin-left: 1em;
      background-color: #ddbc60e8 ;
      border: 2px solid white;
+     border-radius: 30px 30px 30px 30px;
      overflow: visible;
  }
  aside #listTable
@@ -83,17 +88,35 @@ tr:nth-of-type(odd) {
 
  footer
  {
-	bottom: 0;
-    position:static;
-
+     bottom: 0px;
     border-top: 2px solid white;
 }
 
-
+/* When the window is at it's smallest */
 @media (max-height:800px){
-    footer { position: static; }
-    header { padding-top:0px; }
+    footer{position: relative;}
+    .container-fluid {display: block;}
+    aside{width: 100%;}
+    #map{width: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+padding-bottom: 1em;}
+    header { 
+        text-align: center;
+        padding-top:0px; }
 }
+@media (max-width:1200px)
+{
+    footer{position: relative;}
+    .container-fluid {display: block;}
+    aside{width: 100%;}
+    #map{width: 100%;
+        margin-left: 1em;
+        padding-bottom: 2em;}
+    header { 
+        text-align: center;
+        padding-top:0px; }
+} 
 
 .footer-distributed{
     background-color: #2c292f;
@@ -287,29 +310,29 @@ tr:nth-of-type(odd) {
 /*SCROLL BAR DESIGN/*/
 
 body::-webkit-scrollbar {
-    width: 12px;               / width of the entire scrollbar /
+    width: 12px;               /* width of the entire scrollbar */
   }
 
 body::-webkit-scrollbar-track {
-    background: #f7dc6e;        / color of the tracking area /
+    background: #f7dc6e;        /* color of the tracking area */
   }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #2c292f;    / color of the scroll thumb /
-    border-radius: 20px;       / roundness of the scroll thumb /
-    border: 1px solid white;  / creates padding around scroll thumb /
+    background-color: #2c292f;    /* color of the scroll thumb */
+    border-radius: 30px;       /* roundness of the scroll thumb */
+    border: 1px solid white;  /* creates padding around scroll thumb */
   }
 
-aside #listTable::-webkit-scrollbar {
-    width: 12px;               / width of the entire scrollbar /
+div#listTable::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
   }
 
-aside #listTable::-webkit-scrollbar-track {
-    background: #ddbc60e8;        / color of the tracking area /
+div#listTable::-webkit-scrollbar-track {
+    background: #ddbc60e8 ;        /* color of the tracking area */
   }
 
-aside #listTable::-webkit-scrollbar-thumb {
-    background-color: #2c292f;    / color of the scroll thumb /
-    border-radius: 20px;       / roundness of the scroll thumb /
-    border: 1px solid white;  / creates padding around scroll thumb */
+div#listTable::-webkit-scrollbar-thumb {
+    background-color: #2c292f;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid white;  /* creates padding around scroll thumb */
 }
