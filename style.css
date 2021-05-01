@@ -207,8 +207,11 @@ tr:nth-of-type(odd) {
 }
 
 .footer-distributed .footer-center p a{
-    color:  #f7dc6e;
+    color: white;
     text-decoration: none;;
+}
+.footer-center p a:hover{
+    color: #f7dc6e;
 }
 
 /* Footer Right */
@@ -283,10 +286,17 @@ tr:nth-of-type(odd) {
   }
   .fa:hover
   {
-      opacity: 0.7;
+      color: #f7dc6e;
   }   
- 
-
+.fa-map-marker:hover{
+    opacity: 0.7;
+}
+.fa-phone:hover{
+    opacity: 0.7;
+}
+.fa-envelope:hover{
+    opacity: 0.7;
+}
   /*OPTIONAL COLOR ICONS*/
    /* .fa-facebook {  
     background: #3B5998;  
