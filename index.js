@@ -8,7 +8,10 @@ let infowindow;
     };
 </script>
 */
-function initMap() {
+
+
+function initMap() 
+{
   let location = new google.maps.LatLng(40.8462989,-74.0043587)
   map = new google.maps.Map(document.getElementById("map"), {
     center: location,
@@ -34,7 +37,7 @@ function changeCity(e){
 
   map = new google.maps.Map(document.getElementById("map"), {
     center: location,
-    zoom: 13,
+    zoom: 14,
   });
 
   
@@ -64,6 +67,7 @@ function callback(results, status) {
         
 
       }
+     
     }
   }
 }
@@ -72,6 +76,8 @@ function createMarker(place) {
   var marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
+    Animation: google.maps.Animation.DROP,
+    icon: 'food-restaurant_3.png'
   });
 
   google.maps.event.addListener(marker, 'click', function(){
@@ -81,11 +87,12 @@ function createMarker(place) {
       "</strong><br>" +
       place.vicinity+
       "<br>"+
-      "⭐"+place.rating +
+      "⭐ "+place.rating +
       "</div>"
     );
     infowindow.open(map,this);
   })
+  
 
   
 }
