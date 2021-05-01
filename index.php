@@ -18,71 +18,70 @@
     <header>
     <img src="icons/WEB-logo.png" alt="FoodySeekerLogo">
     </header>
+        <div class="container-fluid">
+            <aside>
+                <div id="searchBox" >
+                    <form method="get" action="">
+                        <section>
+                            <select id="getSelect">
+                                <?php 
+                                    while($row = mysqli_fetch_array($getTable)){
+                                        echo "<option id=".$row['id']." value=".$row['latitude'].'&'.$row['longitude'].">".$row['name']."</option>";
+                                    }    
+                                ?>     
+                            </select>
+                            
+                            <input type="button" value = "Search Area"/ onclick="changeCity('getSelect')">
 
-    <div class="container-fluid">
-        <aside>
-            <div id="searchBox" >
-                <form method="get" action="">
-                    <section>
-                        <select id="getSelect">
-                            <?php 
-                                while($row = mysqli_fetch_array($getTable)){
-                                    echo "<option id=".$row['id']." value=".$row['latitude'].'&'.$row['longitude'].">".$row['name']."</option>";
-                                }    
-                            ?>     
-                        </select>
-                        
-                        <input type="button" value = "Search Area"/ onclick="changeCity('getSelect')">
-
-                    </section>
-                </form>
-            </div>
-            <div id="listTable">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Restaurants</th>
-                            <th>Rating</th>
-                        </tr>
-                    </thead>
-                    <tbody id="Table">
-
-                    </tbody>
-                </table>
-            </div>
-            <!-- <div class="col-md-6">
-
-                    <h3>Comments</h3>
-                    <form action="" method="post" >
-                        <input type="hidden" name="comment" value="" />
-                        <textarea name="comment"></textarea>
-                        <br/>
-                        <input type="submit" name="submit" value="Add Comment" />
-
+                        </section>
                     </form>
+                </div>
+                <div id="listTable">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Restaurants</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Table">
 
-                    <div class="comments">
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="col-md-6">
 
-                    <?php 
+                        <h3>Comments</h3>
+                        <form action="" method="post" >
+                            <input type="hidden" name="comment" value="" />
+                            <textarea name="comment"></textarea>
+                            <br/>
+                            <input type="submit" name="submit" value="Add Comment" />
 
-                    #$conn = OpenCon();
+                        </form>
 
-                    #$sql = "INSERT INTO nj_cities.comments (comment)";
+                        <div class="comments">
+
+                        <?php 
+
+                        #$conn = OpenCon();
+
+                        #$sql = "INSERT INTO nj_cities.comments (comment)";
 
 
-                   # CloseCon($conn);
+                    # CloseCon($conn);
 
-                    ?>
+                        ?>
 
-                    </div>
-                    </div> -->
-        </aside>       
-    
+                        </div>
+                        </div> -->
+            </aside>       
+        
 
-        <div id="map">
-        </div>
-    </div> 
-    
+            <div id="map">
+            </div>
+        </div> 
+    </div>
     <div id="footerdiv">
         <footer class="footer-distributed">
 
