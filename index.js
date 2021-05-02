@@ -54,6 +54,7 @@ function changeCity(e){
 
 function callback(results, status) {
   $("#Table").empty();
+  let arry = [];
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
       if(results[i].rating >= 4.3){
@@ -61,13 +62,23 @@ function callback(results, status) {
         if(results[i].name.length >= 6){
           results[i].name = results[i].name+"\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0";
         }
-        $("#Table").append(
-          "<tr onclick=\'showRestaurant(this)\'><td>"+results[i].name+"</td><td>"+results[i].rating+"</td></tr>"
-          );
+        arry.push(results[i])
         
-
+        // $("#Table").append(
+        //   "<tr onclick=\'showRestaurant(this)\'><td>"+results[i].name+"</td><td>"+results[i].rating+"</td></tr>"
+        //   );
+        
       }
      
+    }
+    arry.sort(function(a,b){
+      return a.rating - b.rating;
+    })
+    arry = arry.reverse();
+    for(i = 0; i < arry.length; i++){
+      $("#Table").append(
+        "<tr onclick=\'showRestaurant(this)\'><td>"+arry[i].name+"</td><td>"+arry[i].rating+"</td></tr>"
+        );
     }
   }
 }
