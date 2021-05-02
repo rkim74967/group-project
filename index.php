@@ -16,11 +16,11 @@
         include('data.php');
      ?>
     <header>
-    <img src="icons/WEB-logo.png" alt="FoodySeekerLogo">
+    <img src="logos/WEB-logo.png" alt="FoodySeekerLogo">
     </header>
         <div class="container-fluid">
             <aside>
-                <div id="searchBox" >
+                <div id="dropBox" >
                     <form method="get" action="">
                         <section>
                             <select id="getSelect">
@@ -31,8 +31,7 @@
                                 ?>     
                             </select>
                             
-                            <input type="button" value = "Search Area"/ onclick="changeCity('getSelect')">
-
+                            <input id = "button" type="button" value = "Search Area" onclick="changeCity('getSelect')">
                         </section>
                     </form>
                 </div>
@@ -49,32 +48,6 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- <div class="col-md-6">
-
-                        <h3>Comments</h3>
-                        <form action="" method="post" >
-                            <input type="hidden" name="comment" value="" />
-                            <textarea name="comment"></textarea>
-                            <br/>
-                            <input type="submit" name="submit" value="Add Comment" />
-
-                        </form>
-
-                        <div class="comments">
-
-                        <?php 
-
-                        #$conn = OpenCon();
-
-                        #$sql = "INSERT INTO nj_cities.comments (comment)";
-
-
-                    # CloseCon($conn);
-
-                        ?>
-
-                        </div>
-                        </div> -->
             </aside>       
         
 
@@ -86,8 +59,8 @@
         <footer class="footer-distributed">
 
 			<div class="footer-left">
-				<h3>ABOUT<span>FOODYSEEKER</span></h3>
-
+				<h3><img src="logos/footerlogo_1.png" alt="FoodySeekerLogo">ABOUT<span>FOODYSEEKER</span></h3>
+                
 				<p class="footer-links">
 					<a href="#">Home</a>
 					|
@@ -114,13 +87,13 @@
 				</div>
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@foodyseeker.com">eat@foodyseeker.com</a></p>
+					<p><a href="mailto:support@foodyseeker.com">eatery@foodyseeker.com</a></p>
 				</div>
 			</div>
 			<div class="footer-right">
 				<p class="footer-company-about">
 					<span>About the company</span>
-					We make finding your next meal easy. Just click the <br>city you want to dine in and leave the rest to us. </p>
+					Tired of eating at bad restaurants?<br>We got you covered.<br>Just choose a city and leave the rest to us. </p>
 				<div class="footer-icons">
 					<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
 					<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
