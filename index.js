@@ -43,7 +43,7 @@ function changeCity(e){
   
   var request = {
     location: location,
-    radius: 3000,
+    radius: 4000,
     type: ['restaurant'],
     fields: ['name'],
   };
@@ -56,7 +56,7 @@ function callback(results, status) {
   $("#Table").empty();
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      if(results[i].rating >= 4.3){
+      if(results[i].rating >= 0){
         createMarker(results[i]);
         if(results[i].name.length >= 6){
           results[i].name = results[i].name+"\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0";
@@ -77,7 +77,7 @@ function createMarker(place) {
     map: map,
     position: place.geometry.location,
     Animation: google.maps.Animation.DROP,
-    icon: 'food-restaurant_3.png'
+    icon: 'icons/food-restaurant_3.png'
   });
 
   google.maps.event.addListener(marker, 'click', function(){
